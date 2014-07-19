@@ -1,34 +1,23 @@
-define([
-	'app',
-	'text!modules/home/show/templates/layout.html',
-	'text!modules/home/show/templates/user.html',
-	'text!modules/home/show/templates/event.html',
+App.module('HomeApp.Show', function(Show, App, Backbone, Marionette, $, _){
 
-], function(App, LayoutTemplate, UserTemplate, EventTemplate){
-
-	App.module('HomeApp.Show', function(Show, App, Backbone, Marionette, $, _){
-	
-		Show.Layout = Marionette.LayoutView.extend({
-			template: LayoutTemplate,
-			regions: {
-				userRegion: '#user-region',
-				eventsRegion: '#events-region'
-			}
-		});
-
-		Show.User = Marionette.ItemView.extend({
-			template: UserTemplate,
-		});
-
-		Show.Event = Marionette.ItemView.extend({
-			template: EventTemplate,
-		});
-
-		Show.Events = Marionette.CollectionView.extend({	
-			childView: Show.Event,
-		});
-
+	Show.Layout = Marionette.LayoutView.extend({
+		template: '#home-list-layout',
+		regions: {
+			userRegion: '#user-region',
+			eventsRegion: '#events-region'
+		}
 	});
 
-	return App.HomeApp.Show;
+	Show.User = Marionette.ItemView.extend({
+		template: '#home-list-user',
+	});
+
+	Show.Event = Marionette.ItemView.extend({
+		template: '#home-list-event',
+	});
+
+	Show.Events = Marionette.CollectionView.extend({	
+		childView: Show.Event,
+	});
+
 });

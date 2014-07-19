@@ -9,10 +9,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <meta http-equiv="cleartype" content="on">
     <link rel="stylesheet" href=".tmp/css/main.css">
+    <script src="scripts/libs/jquery.min.js"></script>
+    <script src="scripts/libs/lodash.min.js"></script>
+    <script src="scripts/libs/backbone.js"></script>
+    <script src="scripts/libs/hammer.min.js"></script>
+    <script src="scripts/libs/jquery.hammer.js"></script>
+    <script src="scripts/libs/backbone.hammer.js"></script>
+    <script src="scripts/libs/backbone.marionette.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/entities/user.js"></script>
+    <script src="scripts/entities/event.js"></script>
+    <script src="scripts/modules/home/home_app.js"></script>
+    <script src="scripts/modules/home/show/show_view.js"></script>
+    <script src="scripts/modules/home/show/show_controller.js"></script>
+    <script src="scripts/modules/events/events_app.js"></script>
+    <script src="scripts/modules/events/list/list_view.js"></script>
+    <script src="scripts/modules/events/list/list_controller.js"></script>
+    <script src="scripts/modules/users/users_app.js"></script>
+    <script src="scripts/modules/users/list/list_view.js"></script>
+    <script src="scripts/modules/users/list/list_controller.js"></script>
+    <script src="scripts/modules/users/show/show_view.js"></script>
+    <script src="scripts/modules/users/show/show_controller.js"></script>
 </head>
 <body>
 	<div id="main-region"></div>
 	<div id="dialog-region"></div>
-	<script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+
+    <script type="text/template" id="home-list-layout">
+        <div id="user-region"></div>
+        <div id="events-region"></div>
+        <div class="row text-center">
+            <a href="#events">+</a>
+        </div>
+    </script>
+    <script type="text/template" id="home-list-user">
+        <div class="row">
+            <div class="small-12 small-centered columns">
+            <img src="<%- photo %>">        
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="small-24 columns">
+                <%= firstName %> <%= lastName %>        
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="small-24 columns">
+                <%= title %> • <%= industry %>  
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="home-list-event">
+        <div class="row text-center">
+            <div class="small-24 columns">
+                <div class="event" style="border:1px solid #ccc;">
+                    <%= name %>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="events-list-layout">
+        <div id="user-region"></div>
+        <div id="new-region"></div>
+    </script>
+    <script type="text/template" id="events-list-user">
+        <div class="row">
+            <div class="small-12 small-centered columns">
+            <img src="<%= photo %>">        
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="small-24 columns">
+                <%= firstName %> <%= lastName %>        
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="small-24 columns">
+                <%= title %> • <%= industry %>  
+            </div>
+        </div>
+    </script>
+    <script type="text/template" id="events-list-new">
+        <div class="row">
+            <div class="small-12 small-centered columns">
+            <img src="<%= photo %>">        
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="small-24 columns">
+                <%= firstName %> <%= lastName %>        
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="small-24 columns">
+                <%= title %> • <%= industry %>  
+            </div>
+        </div>
+    </script>
+
+
+    <script>
+        App.start();
+    </script>
 </body>
 </html>

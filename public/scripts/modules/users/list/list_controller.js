@@ -30,6 +30,10 @@ define([
 			usersRegion: function(){
 				var usersView = this.getUsersView();
 				this.layout.usersRegion.show(usersView);
+
+				usersView.listenTo(usersView, 'childview:load:details', function(iv){
+					App.vent.trigger('load:users:show', {model:iv.model})
+				});
 			},
 		});
 

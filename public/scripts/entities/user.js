@@ -13,6 +13,7 @@ define(['app'], function(App){
 		var API = {
 			getUser: function(){
 				var user = new Entities.User({
+					id: '1',
 					firstName: 'Adam',
 					lastName: 'Sandler',
 					photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
@@ -32,44 +33,54 @@ define(['app'], function(App){
 			getUsersFromEvent: function(){
 				var users = new Entities.UserCollection([
 					{
+						id: '1',
 						firstName: 'Adam',
 						lastName: 'Sandler',
 						photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
 						title: 'iOS developer',
 						industry: 'Start up',
-						company: 'Facebook'
+						company: 'Facebook',
+						comment: 'wouldn\'t stop talking'
 					},
 					{
+						id: '2',
 						firstName: 'Adam',
 						lastName: 'Sandler',
 						photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
 						title: 'iOS developer',
 						industry: 'Start up',
-						company: 'Facebook'
+						company: 'Facebook',
+						comment: 'wouldn\'t stop talking'
 					},
 					{
+						id: '3',
 						firstName: 'Adam',
 						lastName: 'Sandler',
 						photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
 						title: 'iOS developer',
 						industry: 'Start up',
-						company: 'Facebook'
+						company: 'Facebook',
+						comment: 'wouldn\'t stop talking'
 					},
 					{
+						id: '4',
 						firstName: 'Adam',
 						lastName: 'Sandler',
 						photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
 						title: 'iOS developer',
 						industry: 'Start up',
-						company: 'Facebook'
+						company: 'Facebook',
+						comment: 'wouldn\'t stop talking'
 					},
 					{
+						id: '5',
 						firstName: 'Adam',
 						lastName: 'Sandler',
 						photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
 						title: 'iOS developer',
 						industry: 'Start up',
-						company: 'Facebook'
+						company: 'Facebook',
+						comment: 'wouldn\'t stop talking'
 					},
 				]);
 

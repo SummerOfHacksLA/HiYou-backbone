@@ -17,9 +17,11 @@ define([
 					new UsersApp.List.Controller();
 				});
 			},
-			showUser: function(id){
+			showUser: function(id, options){
+				var controllerOptions = options || {};
+				controllerOptions.id = id;
 				require(['modules/users/show/show_controller'], function(){
-					new UsersApp.Show.Controller();
+					new UsersApp.Show.Controller(controllerOptions);
 				});
 			},
 		};
@@ -27,7 +29,12 @@ define([
 		App.vent.on('load:users', function(){
 			Backbone.history.navigate('users');
 			API.listUsers();
-		})
+		});
+
+		App.vent.on('load:users:show', function(options){
+			Backbone.history.navigate('users'+options.model.id);
+			API.showUser(options.model.id, options);
+		});
 		
 		App.addInitializer(function(){
 			new UsersApp.Router({

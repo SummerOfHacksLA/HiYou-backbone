@@ -15,6 +15,9 @@ define([
 
 		List.User = Marionette.ItemView.extend({
 			template: UserTemplate,
+			triggers: {
+				'click': 'load:details'
+			}
 		});
 
 		List.Users = Marionette.CollectionView.extend({	

@@ -8,7 +8,8 @@ define([
 	
 		Show.Controller = Marionette.Controller.extend({
 			initialize: function(options){
-				this.user = App.request('user:entity')
+				console.log(options)
+				this.user = options.model || App.request('user:entity');
 		
 				this.layout = this.getLayout();
 		

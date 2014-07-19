@@ -1,20 +1,38 @@
 <div class="row">
-	<img src="<%= photo %>">	
-</div>
-<div class="row">
-	<div class="column-50 column">
-		<%= firstName %>		
+	<div class="small-12 small-centered columns">
+		<img src="<%= photo %>">		
 	</div>
- 	<div class="column-50 column">
- 		<%= lastName %>
- 	</div>
 </div>
-<div class="row">
-	<%= title %>
+<div class="row text-center">
+	<div class="small-12 columns">
+		<div class="" style="border-bottom:1px solid #ccc;">
+			<%= firstName %>	
+		</div>
+	</div>
+	<div class="small-12 columns">
+		<div class="" style="border-bottom:1px solid #ccc;">
+			<%= lastName %>
+		</div>
+	</div>
 </div>
-<div class="row">
-	<%= company %>
+<div class="row text-center">
+	<div class="small-24 columns">
+		<div class="" style="border-bottom:1px solid #ccc">
+			<%= title %>
+		</div>
+	</div>
 </div>
-<textarea>
-	<%= comment %>
-</textarea>
+<div class="row text-center">
+	<div class="small-24 columns">
+		<div class="" style="border-bottom:1px solid #ccc">
+			<%= company %>
+		</div>
+	</div>
+</div>
+<div class="row" style="margin-top:20px;">
+	<div class="small-24 columns">
+		<textarea>
+			<%= comment %>
+		</textarea>
+	</div>
+</div>

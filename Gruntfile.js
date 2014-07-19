@@ -43,6 +43,16 @@ module.exports = function(grunt){
 		        }
 		    },
 		},
+		requirejs: {
+			compile: {
+				options: {
+					baseUrl: "public/scripts",
+					mainConfigFile: "public/scripts/main.js",
+					name: "main",
+					out: "public/scripts/main.min.js"
+				}
+			}
+		}
 
 
 	});

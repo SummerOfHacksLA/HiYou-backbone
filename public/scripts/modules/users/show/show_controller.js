@@ -1,12 +1,14 @@
 define([
 	'app',
-	'modules/users/show/show_view'
+	'modules/users/show/show_view',
+	'entities/user'
 ], function(App, View){
 
 	App.module('UsersApp.Show', function(Show, App, Backbone, Marionette, $, _){
 	
 		Show.Controller = Marionette.Controller.extend({
 			initialize: function(options){
+				this.user = App.request('user:entity')
 		
 				this.layout = this.getLayout();
 		
@@ -18,7 +20,7 @@ define([
 			},
 		
 			getLayout: function(){
-				return new View.Layout();
+				return new View.Layout({model:this.user});
 			},
 		
 			

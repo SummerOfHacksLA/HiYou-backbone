@@ -18,7 +18,8 @@ define(['app'], function(App){
 					photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
 					title: 'iOS developer',
 					industry: 'Start up',
-					company: 'Facebook'
+					company: 'Facebook',
+					comment: 'wouldn\'t stop talking'
 				});
 
 				return user;

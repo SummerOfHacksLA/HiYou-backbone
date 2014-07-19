@@ -11,6 +11,9 @@ define(['app'], function(App){
 		});
 
 		var API = {
+			getNewEvent: function(){
+				return new Entities.Event();	
+			},
 			getUserEvents: function(){
 				var events = new Entities.EventCollection([
 					{ name: '2013 Hackathon' },
@@ -23,6 +26,10 @@ define(['app'], function(App){
 		};
 
 		App.reqres.setHandler('event:entity', function(){
+		});
+
+		App.reqres.setHandler('event:entity:new', function(){
+			return API.getNewEvent();
 		});
 
 		App.reqres.setHandler('event:entities', function(){

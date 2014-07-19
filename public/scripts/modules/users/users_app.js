@@ -18,12 +18,16 @@ define([
 				});
 			},
 			showUser: function(id){
-				console.log(id)
 				require(['modules/users/show/show_controller'], function(){
 					new UsersApp.Show.Controller();
 				});
 			},
 		};
+
+		App.vent.on('load:users', function(){
+			Backbone.history.navigate('users');
+			API.listUsers();
+		})
 		
 		App.addInitializer(function(){
 			new UsersApp.Router({

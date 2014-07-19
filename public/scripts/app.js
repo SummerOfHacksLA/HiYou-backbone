@@ -19,7 +19,8 @@ define([
 		if (Backbone.history) {
 			require([
 				'modules/home/home_app',
-				'modules/events/events_app'
+				'modules/events/events_app',
+				'modules/users/users_app'
 			], function(){
 				Backbone.history.start();
 

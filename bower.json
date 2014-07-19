@@ -1,0 +1,13 @@
+{
+  "name": "salesforce",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "requirejs": "~2.1.14",
+    "jquery": "~2.1.1",
+    "lodash": "~2.4.1",
+    "backbone": "~1.1.2",
+    "marionette": "~2.0.3",
+    "text": "~2.0.12"
+  }
+}

@@ -18,6 +18,7 @@ define(['app'], function(App){
 					photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
 					title: 'iOS developer',
 					industry: 'Start up',
+					company: 'Facebook'
 				});
 
 				return user;
@@ -29,7 +30,46 @@ define(['app'], function(App){
 
 			getUsersFromEvent: function(){
 				var users = new Entities.UserCollection([
-					{}
+					{
+						firstName: 'Adam',
+						lastName: 'Sandler',
+						photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
+						title: 'iOS developer',
+						industry: 'Start up',
+						company: 'Facebook'
+					},
+					{
+						firstName: 'Adam',
+						lastName: 'Sandler',
+						photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
+						title: 'iOS developer',
+						industry: 'Start up',
+						company: 'Facebook'
+					},
+					{
+						firstName: 'Adam',
+						lastName: 'Sandler',
+						photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
+						title: 'iOS developer',
+						industry: 'Start up',
+						company: 'Facebook'
+					},
+					{
+						firstName: 'Adam',
+						lastName: 'Sandler',
+						photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
+						title: 'iOS developer',
+						industry: 'Start up',
+						company: 'Facebook'
+					},
+					{
+						firstName: 'Adam',
+						lastName: 'Sandler',
+						photo: 'http://thedukesplayground.files.wordpress.com/2012/02/adam_sandler.jpg',
+						title: 'iOS developer',
+						industry: 'Start up',
+						company: 'Facebook'
+					},
 				]);
 
 				return users;

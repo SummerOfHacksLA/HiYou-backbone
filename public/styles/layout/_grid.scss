@@ -15,3 +15,15 @@ $row-width: rem-calc(1000) !default;
 .row {
 	@include grid-row;
 }
+
+.column {
+	float:left;
+}
+
+.column-40 {
+	width:40%;
+}
+
+.column-60 {
+	width:60%;
+}

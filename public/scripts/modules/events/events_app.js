@@ -12,11 +12,22 @@ define([
 		
 		var API = {
 			listEvents: function(){
+				App.nav.set('back', 'home');
+				App.nav.set('middle', '');
+				App.nav.set('add', '');
+
+				App.vent.trigger('load:nav');
+
 				require(['modules/events/list/list_controller'], function(){
 					new EventsApp.List.Controller();
 				});
 			}
 		};
+
+		App.vent.on('load:events', function(){
+			Backbone.history.navigate('events');
+			API.listEvents();
+		});
 		
 		App.addInitializer(function(){
 			new EventsApp.Router({

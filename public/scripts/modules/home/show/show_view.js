@@ -13,7 +13,11 @@ define([
 			regions: {
 				userRegion: '#user-region',
 				eventsRegion: '#events-region'
+			},
+			triggers: {
+				'click [data-link]': 'open:events'
 			}
+
 		});
 
 		Show.User = Marionette.ItemView.extend({

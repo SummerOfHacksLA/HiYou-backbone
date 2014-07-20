@@ -17,10 +17,10 @@ define(['app'], function(App){
 					firstName: 'PA',
 					lastName: 'LAVA',
 					photo: 'images/pa-lava.jpg',
-					title: 'iOS developer',
+					title: 'JS developer',
 					industry: 'Start up',
-					company: 'Facebook',
-					comment: 'wouldn\'t stop talking'
+					company: 'Perfect You',
+					comment: 'has 723 pokemon, likes long walks on the beach'
 				});
 
 				return user;
@@ -40,7 +40,7 @@ define(['app'], function(App){
 						title: 'iOS developer',
 						industry: 'Start up',
 						company: 'Facebook',
-						comment: 'wouldn\'t stop talking'
+						comment: 'funny guy, likes golf'
 					},
 					{
 						id: '2',
@@ -50,7 +50,7 @@ define(['app'], function(App){
 						title: 'Android developer',
 						industry: 'Start up',
 						company: 'Google',
-						comment: 'wouldn\'t stop talking'
+						comment: 'likes to get high, young'
 					},
 					{
 						id: '3',
@@ -60,7 +60,7 @@ define(['app'], function(App){
 						title: 'mobile developer',
 						industry: 'Start up',
 						company: 'Microsoft',
-						comment: 'wouldn\'t stop talking'
+						comment: 'wouldn\'t stop talking about startups'
 					},
 					{
 						id: '4',
@@ -70,7 +70,7 @@ define(['app'], function(App){
 						title: 'Software developer',
 						industry: 'Start up',
 						company: 'Quora',
-						comment: 'wouldn\'t stop talking'
+						comment: 'likes asian food, photography hobby'
 					},
 					{
 						id: '5',
@@ -80,7 +80,7 @@ define(['app'], function(App){
 						title: 'Sales',
 						industry: 'Start up',
 						company: 'RenRen',
-						comment: 'wouldn\'t stop talking'
+						comment: 'good at sales, goes to vegas'
 					},
 				]);
 

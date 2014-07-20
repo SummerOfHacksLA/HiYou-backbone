@@ -5,15 +5,21 @@ define([
 	var App = new Marionette.Application();
 
 	App.addRegions({
+		navRegion: '#nav-region',
 		mainRegion: '#main-region',
 		dialogRegion: '#dialog-region'
 	});
 
 	App.on("before:start", function(){
-		require(['config/settings']);
+		require(['config/settings', 'entities/nav'], function(){
+			App.nav = App.request('nav:entity');
+		});
 	});
 
 	App.addInitializer(function(){
+		require(['modules/nav/nav_app'], function(){
+			App.module("NavApp").start();
+		});
 	});
 
 	App.on("start", function(options){
@@ -21,7 +27,8 @@ define([
 			require([
 				'modules/home/home_app',
 				'modules/events/events_app',
-				'modules/users/users_app'
+				'modules/users/users_app',
+				'entities/nav'
 			], function(){
 				Backbone.history.start();
 

@@ -6,12 +6,19 @@ define([
 	
 		HomeApp.Router = Marionette.AppRouter.extend({
 			appRoutes: {
-				"home": "showHome"
+				'': 'showHome',
+				'home': 'showHome'
 			}
 		});
 		
 		var API = {
 			showHome: function(){
+				App.nav.set('back', '');
+				App.nav.set('middle', '');
+				App.nav.set('add', '');
+
+				App.vent.trigger('load:nav');
+
 				require(['modules/home/show/show_controller'], function(){
 					new HomeApp.Show.Controller();
 				});

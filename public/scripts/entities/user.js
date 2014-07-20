@@ -96,6 +96,10 @@ define(['app'], function(App){
 			return API.getNewUser();
 		});
 
+		App.reqres.setHandler('user:entity:new', function(){
+			return API.getNewUser();
+		});
+
 		App.reqres.setHandler('user:entities', function(){
 			return API.getUsersFromEvent();
 		});

@@ -10,6 +10,8 @@ define([
 			initialize: function(options){
 				this.users = App.request('user:entities');
 
+				console.log(options)
+
 				this.layout = this.getLayout();
 		
 				this.listenTo(this.layout, 'show', function(){

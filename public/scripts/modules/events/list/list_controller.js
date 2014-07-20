@@ -24,6 +24,8 @@ define([
 				this.layout.listenTo(this.layout, 'load:home', function(){
 					App.vent.trigger('load:home');
 				});
+
+				this.layout.listenTo(this.layout, 'open:event', this.openEvent);
 			},
 		
 			getLayout: function(){
@@ -38,6 +40,10 @@ define([
 				return new View.New({model:this.event});
 			},
 
+			getEventView: function(){
+				return new View.Event();
+			},
+
 			userRegion: function(){
 				var userView = this.getUserView();
 				this.layout.userRegion.show(userView);
@@ -50,6 +56,16 @@ define([
 				newView.listenTo(newView, 'users:list', function(){
 					App.vent.trigger('load:users');
 				});
+			},
+
+			openEvent: function(){
+				var eventView = new View.Event();
+				// var eventView = this.getEventView();
+				App.dialogRegion.show(eventView);
+
+				eventView.listenTo(eventView, 'close:dialog', function(){
+					App.dialogRegion.reset();
+				})
 			},
 		
 			

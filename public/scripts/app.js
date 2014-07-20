@@ -5,7 +5,8 @@ define([
 	var App = new Marionette.Application();
 
 	App.addRegions({
-		mainRegion: '#main-region'
+		mainRegion: '#main-region',
+		dialogRegion: '#dialog-region'
 	});
 
 	App.on("before:start", function(){

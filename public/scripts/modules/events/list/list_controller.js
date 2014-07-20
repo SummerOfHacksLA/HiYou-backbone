@@ -20,6 +20,10 @@ define([
 				});
 		
 				App.mainRegion.show(this.layout);
+
+				this.layout.listenTo(this.layout, 'load:home', function(){
+					App.vent.trigger('load:home');
+				});
 			},
 		
 			getLayout: function(){

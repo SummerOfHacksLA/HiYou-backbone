@@ -17,6 +17,11 @@ define([
 				});
 			}
 		};
+
+		App.vent.on('load:home', function(){
+			Backbone.history.navigate('home');
+			API.showHome();
+		});
 		
 		App.addInitializer(function(){
 			new HomeApp.Router({

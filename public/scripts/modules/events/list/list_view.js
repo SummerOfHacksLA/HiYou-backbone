@@ -12,6 +12,9 @@ define([
 			regions: {
 				userRegion: '#user-region',
 				newRegion: '#new-region'
+			},
+			triggers: {
+				'click [data-back]': 'load:home'
 			}
 		});
 
